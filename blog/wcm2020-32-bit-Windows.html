@@ -18,6 +18,7 @@
 
   <!-- Feed -->
         <link href="https://40823129.github.io/wcm2020/blog/feeds/all.atom.xml" type="application/atom+xml" rel="alternate" title="wcm2020 Full Atom Feed" />
+          <link href="https://40823129.github.io/wcm2020/blog/feeds/{slug}.atom.xml" type="application/atom+xml" rel="alternate" title="wcm2020 Categories Atom Feed" />
 
   <link href="https://40823129.github.io/wcm2020/blog/theme/css/style.css" type="text/css" rel="stylesheet" />
 
@@ -39,27 +40,48 @@
   <![endif]-->
 
 
+    <link href="https://40823129.github.io/wcm2020/blog/wcm2020-32-bit-Windows.html" rel="canonical" />
+
+
+        <meta name="author" content="40823129">
+
+        <meta name="tags" content="wcm2020">
+
+
 
 
 <!-- Open Graph -->
 <meta property="og:site_name" content="wcm2020"/>
-<meta property="og:type" content="blog"/>
 <meta property="og:title" content="wcm2020"/>
-<meta property="og:description" content="View the blog."/>
+<meta property="og:description" content=""/>
 <meta property="og:locale" content="en_US"/>
-<meta property="og:url" content="https://40823129.github.io/wcm2020/blog/"/>
-<meta property="og:image" content="https://40823129.github.io/wcm2020/blog/theme/images/home-bg.jpg">
+<meta property="og:url" content="https://40823129.github.io/wcm2020/blog/wcm2020-32-bit-Windows.html"/>
+<meta property="og:type" content="article"/>
+<meta property="article:published_time" content="2020-06-24 21:17:00+08:00"/>
+<meta property="article:modified_time" content=""/>
+<meta property="article:author" content="https://40823129.github.io/wcm2020/blog/author/40823129.html">
+<meta property="article:section" content="Misc"/>
+<meta property="article:tag" content="wcm2020"/>
+<meta property="og:image" content="https://40823129.github.io/wcm2020/blog/theme/images/post-bg.jpg">
 
 <!-- Twitter Card -->
 
 <script type="application/ld+json">
 {
-  "@context" : "http://schema.org",
-  "@type" : "Website",
-  "name": " wcm2020 ",
-  "url" : "https://40823129.github.io/wcm2020/blog/",
-  "image": "https://40823129.github.io/wcm2020/blog/theme/images/home-bg.jpg",
-  "description": "View the blog."
+  "@context": "http://schema.org",
+  "@type": "Article",
+  "name": "wcm2020",
+  "headline": "wcm2020",
+  "datePublished": "2020-06-24 21:17:00+08:00",
+  "dateModified": "",
+  "author": {
+    "@type": "Person",
+    "name": "40823129",
+    "url": "https://40823129.github.io/wcm2020/blog/author/40823129.html"
+  },
+  "image": "https://40823129.github.io/wcm2020/blog/theme/images/post-bg.jpg",
+  "url": "https://40823129.github.io/wcm2020/blog/wcm2020-32-bit-Windows.html",
+  "description": ""
 }
 </script>
 <script type="text/javascript" src="./../cmsimde/static/syntaxhighlighter/shCore.js"></script>
@@ -157,21 +179,33 @@ init_mathjax();
     </ul>
   </div>
 </nav>
+    <!-- Progressbar -->
+    <div class="progress-container">
+        <span class="progress-bar"></span>
+    </div>
+
     <!-- Page Header -->
     <!-- Set your background image for this header on the line below. -->
-    <header id="blog-header" class="has-cover">
+    <header id="post-header" class="has-cover">
       <div class="inner">
         <nav id="navigation">
+            <span id="home-button" class="nav-button">
+                <a class="home-button" href="https://40823129.github.io/wcm2020/blog/index.html" title="Home"><i class="ic ic-arrow-left"></i> Home</a>
+            </span>
           <span id="menu-button" class="nav-button">
             <a class="menu-button"><i class="ic ic-menu"></i> Menu</a>
           </span>
         </nav>
-        <h1 class="blog-name"><a href="https://40823129.github.io/wcm2020/blog/">wcm2020</a></h1>
-            <div class="blog-cover cover" style="background-image: url('https://40823129.github.io/wcm2020/blog/theme/images/home-bg.jpg')">
-        
+        <h1 class="post-title">wcm2020</h1>
+        <!-- TODO : Proper class for headline -->
+        <span class="post-meta">
+                <a href="https://40823129.github.io/wcm2020/blog/author/40823129.html">40823129</a>
+            | <time datetime="週三 24 六月 2020">週三 24 六月 2020</time>
+        </span>
+        <!-- TODO : Modified check -->
+            <div class="post-cover cover" style="background-image: url('https://40823129.github.io/wcm2020/blog/theme/images/post-bg.jpg')">
       </div>
     </header>
-
 
   <section id="wrapper">
     <a class="hidden-close"></a>
@@ -183,47 +217,67 @@ init_mathjax();
 </section>
 
 
-<div id="index" class="container">
-  <main class="content" role="main">
-    <div class="extra-pagination">
-<nav class="pagination" role="pagination">
-  <div class="inner">
-    <span class="pagination-info">Page 1 / 1</span>
-    <div class="clear"></div>
-  </div>
-</nav>
-    </div>
-
+    <!-- Post content -->
+    <main class="content" role="main">
         <article class="post">
         <div class="inner">
-            <header class="post-header">         
-                <h2 class="post-title"><a href="https://40823129.github.io/wcm2020/blog/wcm2020-32-bit-Windows.html" rel="bookmark" title="Permalink to wcm2020">wcm2020</a>
-                </h2>
-                <span class="post-meta">
-                        <a href="https://40823129.github.io/wcm2020/blog/author/40823129.html">40823129</a>
-                     | <time datetime="週三 24 六月 2020">週三 24 六月 2020</time>
-                </span>
+            <section class="post-content">
+                <!-- PELICAN_END_SUMMARY -->
+
+<p>ssh key  設定</p>
+<hr>
+<p>利用隨身系統輸入指令sh
+輸入指令ssh-keygen -t rsa -b 4096 -C "學號"
+預設之金鑰儲存在y:\home.ssh目錄裡
+<img src="https://40823129.github.io/wcm2020/images/sh1.png" width="400" height="350" alt="ub" align=center>
+使用puttygen將private key(id_rsa)導入，並轉換為putty能夠讀懂的格式(.ppk)檔案
+<img src="https://40823129.github.io/wcm2020/images/sh2.png" width="400" height="350" alt="ub" align=center>
+<img src="https://40823129.github.io/wcm2020/images/sh3.png" width="400" height="350" alt="ub" align=center></p>
+<hr>
+<hr>
+            </section>
+
+            <section class="post-info">
+                <div class="post-share">
+                    <a class="twitter" href="https://twitter.com/share?text=wcm2020&amp;url=https://40823129.github.io/wcm2020/blog/wcm2020-32-bit-Windows.html" onclick="window.open(this.href, 'twitter-share', 'width=550,height=235');return false;">
+                    <i class="ic ic-twitter"></i><span class="hidden">Twitter</span>
+                    </a>
+                    <a class="facebook" href="https://www.facebook.com/sharer/sharer.php?u=https://40823129.github.io/wcm2020/blog/wcm2020-32-bit-Windows.html" onclick="window.open(this.href, 'facebook-share','width=580,height=296');return false;">
+                    <i class="ic ic-facebook"></i><span class="hidden">Facebook</span>
+                    </a>
+                    <a class="googleplus" href="https://plus.google.com/share?url=https://40823129.github.io/wcm2020/blog/wcm2020-32-bit-Windows.html" onclick="window.open(this.href, 'google-plus-share', 'width=490,height=530');return false;">
+                    <i class="ic ic-googleplus"></i><span class="hidden">Google+</span>
+                    </a>
+                    <div class="clear"></div>
+                </div>
+
+                <aside class="post-tags">
+<a href="https://40823129.github.io/wcm2020/blog/tag/wcm2020.html">wcm2020</a>                </aside>
+
                 <div class="clear"></div>
-            </header>
-                <section class="post-excerpt">
-                    <p>
-                        
-                    </p>
+
+
                 </section>
-<p>
-  <a data-disqus-identifier="/wcm2020-32-bit-Windows.html" href="https://40823129.github.io/wcm2020/blog/wcm2020-32-bit-Windows.html#disqus_thread">comments</a>
-</p>
+
+                <script type="text/javascript">
+                    var disqus = 'https-40823129-github-io-wcm2020';
+                    var disqus_shortname = 'https-40823129-github-io-wcm2020';
+                    var disqus_identifier = '/wcm2020-32-bit-Windows.html';
+                    var disqus_url = 'https://40823129.github.io/wcm2020/blog/wcm2020-32-bit-Windows.html';
+                </script>
+                <noscript>Please enable JavaScript to view the comments.</noscript>
+                <section class="post-comments">
+                        <a id="show-disqus" class="post-comments-activate" data-disqus-identifier="/wcm2020-32-bit-Windows.html" >Show Comments</a>
+                    <div id="disqus_thread"></div>
+                </section>
+
+                <aside class="post-nav">
+                    <div class="clear"></div>
+                </aside>
+
             </div>
         </article>
-
-<nav class="pagination" role="pagination">
-  <div class="inner">
-    <span class="pagination-info">Page 1 / 1</span>
-    <div class="clear"></div>
-  </div>
-</nav>
-  </main>
-</div>
+    </main>
       <!-- TODO : Body class -->
     <div id="body-class" style="display: none;" class=""></div>
 

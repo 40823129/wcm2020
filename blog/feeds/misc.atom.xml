@@ -1,0 +1,14 @@
+<?xml version="1.0" encoding="utf-8"?>
+<feed xmlns="http://www.w3.org/2005/Atom"><title>wcm2020 - Misc</title><link href="https://40823129.github.io/wcm2020/blog/" rel="alternate"></link><link href="https://40823129.github.io/wcm2020/blog/feeds/misc.atom.xml" rel="self"></link><id>https://40823129.github.io/wcm2020/blog/</id><updated>2020-06-24T21:17:00+08:00</updated><entry><title>wcm2020</title><link href="https://40823129.github.io/wcm2020/blog/wcm2020-32-bit-Windows.html" rel="alternate"></link><published>2020-06-24T21:17:00+08:00</published><updated>2020-06-24T21:17:00+08:00</updated><author><name>40823129</name></author><id>tag:40823129.github.io,2020-06-24:/wcm2020/blog/wcm2020-32-bit-Windows.html</id><summary type="html"></summary><content type="html">&lt;!-- PELICAN_END_SUMMARY --&gt;
+
+&lt;p&gt;ssh key  設定&lt;/p&gt;
+&lt;hr&gt;
+&lt;p&gt;利用隨身系統輸入指令sh
+輸入指令ssh-keygen -t rsa -b 4096 -C "學號"
+預設之金鑰儲存在y:\home.ssh目錄裡
+&lt;img src="https://40823129.github.io/wcm2020/images/sh1.png" width="400" height="350" alt="ub" align=center&gt;
+使用puttygen將private key(id_rsa)導入，並轉換為putty能夠讀懂的格式(.ppk)檔案
+&lt;img src="https://40823129.github.io/wcm2020/images/sh2.png" width="400" height="350" alt="ub" align=center&gt;
+&lt;img src="https://40823129.github.io/wcm2020/images/sh3.png" width="400" height="350" alt="ub" align=center&gt;&lt;/p&gt;
+&lt;hr&gt;
+&lt;hr&gt;</content><category term="Misc"></category><category term="wcm2020"></category></entry></feed>
