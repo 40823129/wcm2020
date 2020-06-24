@@ -99,20 +99,396 @@
 <p><strong>以此為基本再進行延伸。</strong></p>
 <p></p>
 <h2>W11~W13</h2>
+<h4><b>建立虛擬主機</b></h4>
+<p><b>前面步驟為安裝設定重點為ipv4及ipv6網路設定都為自動</b><br/><b></b></p>
+<p><b>進入介面後，再輸入指令</b></p>
+<div>
+<div class="syntaxhighlighter html" id="highlighter_496403">
+<table border="0" cellpadding="0" cellspacing="0" height="53" style="width: 529px;">
+<tbody>
+<tr>
+<td class="gutter" style="width: 10px;">
+<div class="line number1 index0 alt2">1</div>
+</td>
+<td class="code" style="width: 518px;">
+<div class="container">
+<div class="line number1 index0 alt2"><code class="html plain">sudo vi 00-installer-config.yaml</code></div>
+</div>
+</td>
+</tr>
+</tbody>
+</table>
+<p> <strong>輸入指令</strong></p>
+<div>
+<div class="syntaxhighlighter html" id="highlighter_512628">
+<table border="0" cellpadding="0" cellspacing="0" style="width: 531px;">
+<tbody>
+<tr>
+<td class="gutter" style="width: 10px;">
+<div class="line number1 index0 alt2">1</div>
+</td>
+<td class="code" style="width: 519px;">
+<div class="container">
+<div class="line number1 index0 alt2"><code class="html plain">sudo netplan apply</code></div>
+</div>
+</td>
+</tr>
+</tbody>
+</table>
+</div>
+</div>
+<div>
+<div class="syntaxhighlighter html" id="highlighter_528943">
+<table border="0" cellpadding="0" cellspacing="0" style="width: 531px;">
+<tbody>
+<tr>
+<td class="gutter" style="width: 10px;">
+<div class="line number1 index0 alt2">1</div>
+</td>
+<td class="code" style="width: 518px;">
+<div class="container">
+<div class="line number1 index0 alt2"><code class="html plain">ping4 140.130.15.254</code></div>
+</div>
+</td>
+</tr>
+</tbody>
+</table>
+</div>
+</div>
+<p><b>網路部分設定完成<br/><br/></b></p>
+<p><b>安裝pip3</b></p>
+<div>
+<div class="syntaxhighlighter html" id="highlighter_352939">
+<table border="0" cellpadding="0" cellspacing="0" style="width: 531px;">
+<tbody>
+<tr>
+<td class="gutter" style="width: 20.8px;">
+<div class="line number1 index0 alt2">1</div>
+</td>
+<td class="code" style="width: 508.2px;">
+<div class="container">
+<div class="line number1 index0 alt2"><code class="html plain">sudo apt install net-tools</code></div>
+</div>
+</td>
+</tr>
+</tbody>
+</table>
+</div>
+</div>
+<p></p>
+<div>
+<div class="syntaxhighlighter html" id="highlighter_690787">
+<table border="0" cellpadding="0" cellspacing="0" style="width: 531px;">
+<tbody>
+<tr>
+<td class="gutter" style="width: 10px;">
+<div class="line number1 index0 alt2">1</div>
+</td>
+<td class="code" style="width: 518px;">
+<div class="container">
+<div class="line number1 index0 alt2"><code class="html plain">sudo apt update</code></div>
+</div>
+</td>
+</tr>
+</tbody>
+</table>
+</div>
+</div>
+<p></p>
+<div>
+<div class="syntaxhighlighter html" id="highlighter_596639">
+<table border="0" cellpadding="0" cellspacing="0" style="width: 531px;">
+<tbody>
+<tr>
+<td class="gutter" style="width: 10.4px;">
+<div class="line number1 index0 alt2">1</div>
+</td>
+<td class="code" style="width: 518.6px;">
+<div class="container">
+<div class="line number1 index0 alt2"><code class="html plain">sudo apt install python3-pip</code></div>
+</div>
+</td>
+</tr>
+</tbody>
+</table>
+</div>
+</div>
+<p><b>利用pip3安裝flask flask_cors bs4 lxml markdown</b></p>
+<div>
+<div class="syntaxhighlighter html" id="highlighter_348721">
+<table border="0" cellpadding="0" cellspacing="0" style="width: 531px;">
+<tbody>
+<tr>
+<td class="gutter" style="width: 10px;">
+<div class="line number1 index0 alt2">1</div>
+</td>
+<td class="code" style="width: 518px;">
+<div class="container">
+<div class="line number1 index0 alt2"><code class="html plain">sudo pip3 install flask flask_cors bs4 lxml markdown</code></div>
+</div>
+</td>
+</tr>
+</tbody>
+</table>
+</div>
+</div>
+<p><strong>建立github資料夾</strong></p>
+<div>
+<div class="syntaxhighlighter html" id="highlighter_32614">
+<table border="0" cellpadding="0" cellspacing="0" style="width: 531px;">
+<tbody>
+<tr>
+<td class="gutter" style="width: 16px;">
+<div class="line number1 index0 alt2">1</div>
+</td>
+<td class="code" style="width: 513px;">
+<div class="container">
+<div class="line number1 index0 alt2"><code class="html plain">mkdir github</code></div>
+</div>
+</td>
+</tr>
+</tbody>
+</table>
+</div>
+</div>
+<p><strong>安裝桌面</strong></p>
+<div>
+<div class="syntaxhighlighter html" id="highlighter_528937">
+<table border="0" cellpadding="0" cellspacing="0" style="width: 531px;">
+<tbody>
+<tr>
+<td class="gutter" style="width: 10px;">
+<div class="line number1 index0 alt2">1</div>
+</td>
+<td class="code" style="width: 519px;">
+<div class="container">
+<div class="line number1 index0 alt2"><code class="html plain">sudo apt install xorg</code></div>
+</div>
+</td>
+</tr>
+</tbody>
+</table>
+</div>
+</div>
+<div>
+<div class="syntaxhighlighter html" id="highlighter_483064">
+<table border="0" cellpadding="0" cellspacing="0" style="width: 531px;">
+<tbody>
+<tr>
+<td class="gutter" style="width: 10px;">
+<div class="line number1 index0 alt2">1</div>
+</td>
+<td class="code" style="width: 519px;">
+<div class="container">
+<div class="line number1 index0 alt2"><code class="html plain">sudo apt install fluxbox</code></div>
+</div>
+</td>
+</tr>
+</tbody>
+</table>
+</div>
+</div>
+<div>
+<div class="syntaxhighlighter html" id="highlighter_774257">
+<table border="0" cellpadding="0" cellspacing="0" style="width: 531px;">
+<tbody>
+<tr>
+<td class="gutter" style="width: 10px;">
+<div class="line number1 index0 alt2">1</div>
+</td>
+<td class="code" style="width: 519px;">
+<div class="container">
+<div class="line number1 index0 alt2"><code class="html plain">sudo apt install lxde</code></div>
+</div>
+</td>
+</tr>
+</tbody>
+</table>
+</div>
+</div>
+<p>重開虛擬主機</p>
+</div>
+</div>
 <h2>W14</h2>
+<h4>MBR與GPT磁碟分割之差異</h4>
+<p><strong>MBR:MBR為Master Boot Record Boot Record的縮寫，為1983年由IBM公司所提出的分割表格式。</strong></p>
+<p><strong>位於硬碟開始部份的一個特殊磁區，內含系統載入器及硬碟邏輯分割區資訊。啟動系統時會從磁區內使用代碼來啟動系統，若MBR之啟動資訊損壞，則系統無法正常啟動。</strong></p>
+<p><strong>MBR只能用於最大容量為2TB的硬碟，如果使用超過2TB之硬碟，多出來的部分將無法被辨識。MBR最多只支援將硬碟設定為四個主要磁碟分割。</strong></p>
+<p><strong>使用MBR啟動電腦時，將先啟動主機板之BIOS，隨後BIOS載入MBR，最後MBR啟動系統。</strong></p>
+<p><strong>GPT:GPT為GUID Partition Tableartition Table的縮寫，其更加符合現代需求，故成為逐漸取代MBR的新標準。GPT最凸顯的優勢在於它突破了MBR最大只支援2T硬碟的限制，同時使用者可以將硬碟劃分數量不限的分割槽，雖然Windows只允許GPT硬碟上最多有128個分區，但128個分區基本上已經能滿足所有人群的使用需求。</strong></p>
+<p><strong>另外，GPT並不會把引導資料都存儲在一個位置，從資訊安全的角度來看比MBR更加優秀。</strong></p>
 <h2>W15</h2>
+<h4><strong><span>利用Pypdf2切割pdf檔</span></strong></h4>
+<p><strong><span>切割PDF之.py程式檔</span></strong></p>
+<div>
+<div class="syntaxhighlighter html" id="highlighter_694838">
+<table border="0" cellpadding="0" cellspacing="0">
+<tbody>
+<tr>
+<td class="gutter">
+<div class="line number1 index0 alt2">1</div>
+<div class="line number2 index1 alt1">2</div>
+<div class="line number3 index2 alt2">3</div>
+<div class="line number4 index3 alt1">4</div>
+<div class="line number5 index4 alt2">5</div>
+<div class="line number6 index5 alt1">6</div>
+<div class="line number7 index6 alt2">7</div>
+<div class="line number8 index7 alt1">8</div>
+<div class="line number9 index8 alt2">9</div>
+<div class="line number10 index9 alt1">10</div>
+<div class="line number11 index10 alt2">11</div>
+<div class="line number12 index11 alt1">12</div>
+<div class="line number13 index12 alt2">13</div>
+<div class="line number14 index13 alt1">14</div>
+<div class="line number15 index14 alt2">15</div>
+<div class="line number16 index15 alt1">16</div>
+<div class="line number17 index16 alt2">17</div>
+<div class="line number18 index17 alt1">18</div>
+<div class="line number19 index18 alt2">19</div>
+</td>
+<td class="code">
+<div class="container">
+<div class="line number1 index0 alt2"><code class="html plain"># pypdf2_ex1.py</code></div>
+<div class="line number2 index1 alt1"><code class="html plain">import os</code></div>
+<div class="line number3 index2 alt2"><code class="html plain">from PyPDF2 import PdfFileWriter, PdfFileReader</code></div>
+<div class="line number4 index3 alt1"><code class="html spaces">   </code> </div>
+<div class="line number5 index4 alt2"><code class="html plain">pdfReader = PdfFileReader(open("2002_Book_Real-WorldASPNETBuildingAConte.pdf", "rb"))</code></div>
+<div class="line number6 index5 alt1"><code class="html plain">information = [("WhatIsCMS",18,45)]</code></div>
+<div class="line number7 index6 alt2"><code class="html spaces">   </code> </div>
+<div class="line number8 index7 alt1"><code class="html plain">for page in range(len(information)):</code></div>
+<div class="line number9 index8 alt2"><code class="html spaces">    </code><code class="html plain">pdf_writer = PdfFileWriter()</code></div>
+<div class="line number10 index9 alt1"><code class="html spaces">    </code><code class="html plain">start = information[page][1]</code></div>
+<div class="line number11 index10 alt2"><code class="html spaces">    </code><code class="html plain">end = information[page][2]</code></div>
+<div class="line number12 index11 alt1"><code class="html spaces">    </code><code class="html plain">while start&lt;=end:</code></div>
+<div class="line number13 index12 alt2"><code class="html spaces">        </code><code class="html plain">pdf_writer.addPage(pdfReader.getPage(start-1))</code></div>
+<div class="line number14 index13 alt1"><code class="html spaces">        </code><code class="html plain">start+=1</code></div>
+<div class="line number15 index14 alt2"><code class="html spaces">    </code><code class="html plain">if not os.path.exists("./"):</code></div>
+<div class="line number16 index15 alt1"><code class="html spaces">        </code><code class="html plain">os.makedirs(savepath)</code></div>
+<div class="line number17 index16 alt2"><code class="html spaces">    </code><code class="html plain">output_filename = '{}_{}_page_{}.pdf'.format(information[page][0],information[page][1], information[page][2])</code></div>
+<div class="line number18 index17 alt1"><code class="html spaces">    </code><code class="html plain">with open(output_filename,'wb') as out:</code></div>
+<div class="line number19 index18 alt2"><code class="html spaces">        </code><code class="html plain">pdf_writer.write(out)</code></div>
+</div>
+</td>
+</tr>
+</tbody>
+</table>
+</div>
+</div>
 <h2>W16~W17</h2>
-<p>此內容管理系統以 <a href="https://github.com/mdecourse/cmsimde">https://github.com/mdecourse/cmsimde</a> 作為 submodule 運作, 可以選定對應的版本運作, cmsimde 可以持續改版, 不會影響之前設為 submodule, 使用舊版 cmsimde 模組的內容管理相關運作.</p>
-<h4>利用 cmsimde 建立靜態網誌方法:</h4>
-<p>1. 在 github 建立倉儲, git clone 到近端</p>
-<p>2. 參考 <a href="https://github.com/mdecourse/newcms">https://github.com/mdecourse/newcms</a>, 加入除了 cmsimde 目錄外的所有內容</p>
-<p>以 git submodule add <a href="https://github.com/mdecourse/cmsimde">https://github.com/mdecourse/cmsimde</a> cmsimde</p>
-<p>建立 cmsimde 目錄, 並從 github 取下子模組內容.</p>
-<p>3.在近端維護時, 更換目錄到倉儲中的 cmsimde, 以 python wsgi.py 啟動近端網際伺服器.</p>
-<p>動態內容編輯完成後, 以 generate_pages 轉為靜態內容, 以 git add commit 及 push 將內容推到遠端.</p>
-<p>4. 之後若要以 git clone 取下包含 submodule 的所有內容, 執行:</p>
-<p>git clone --recurse-submodules <a href="https://github.com/mdecourse/newcms.git">https://github.com/mdecourse/newcms.git</a></p>
-<h1>Develop</h1>
-<p><a href="https://github.com/mdecourse/cmsimde">https://github.com/mdecourse/cmsimde</a> 的開發, 可以在一個目錄中放入 cmsimde, 然後將 up_dir 中的內容放到與 cmsimde 目錄同位階的地方, 使用 command 進入 cmsimde 目錄, 執行 python wsgi.py, 就可以啟動, 以瀏覽器 https://localhost:9443 就可以連接, 以 admin 作為管理者密碼, 就可以登入維護內容.</p>
-<p>cmsimde 的開發採用 Leo Editor, 開啟 cmsimde 目錄中的 cmsimde.leo 就可以進行程式修改, 結束後, 若要保留網際內容, 只要將 cmsimde 外部的內容倒回 up_dir 目錄中即可後續對 cmsimde 遠端倉儲進行改版.</p>
-<p>init.py 位於  up_dir 目錄, 可以設定 site_title 與 uwsgi 等變數.</p>
+<h4><strong><span>利用pypdf2擷取pdf與合併pdf的程式，並利用API放上動態網站測試。</span></strong></h4>
+<p><strong><span>利用pypdf2擷取出3個pdf檔</span></strong></p>
+<div>
+<div class="syntaxhighlighter html" id="highlighter_657309">
+<table border="0" cellpadding="0" cellspacing="0">
+<tbody>
+<tr>
+<td class="gutter">
+<div class="line number1 index0 alt2">1</div>
+<div class="line number2 index1 alt1">2</div>
+<div class="line number3 index2 alt2">3</div>
+<div class="line number4 index3 alt1">4</div>
+<div class="line number5 index4 alt2">5</div>
+<div class="line number6 index5 alt1">6</div>
+<div class="line number7 index6 alt2">7</div>
+<div class="line number8 index7 alt1">8</div>
+<div class="line number9 index8 alt2">9</div>
+<div class="line number10 index9 alt1">10</div>
+<div class="line number11 index10 alt2">11</div>
+<div class="line number12 index11 alt1">12</div>
+<div class="line number13 index12 alt2">13</div>
+<div class="line number14 index13 alt1">14</div>
+<div class="line number15 index14 alt2">15</div>
+<div class="line number16 index15 alt1">16</div>
+<div class="line number17 index16 alt2">17</div>
+<div class="line number18 index17 alt1">18</div>
+<div class="line number19 index18 alt2">19</div>
+</td>
+<td class="code">
+<div class="container">
+<div class="line number1 index0 alt2"><code class="html plain"># pypdf2_ex2.py</code></div>
+<div class="line number2 index1 alt1"><code class="html plain">import os</code></div>
+<div class="line number3 index2 alt2"><code class="html plain">from PyPDF2 import PdfFileWriter, PdfFileReader</code></div>
+<div class="line number4 index3 alt1"><code class="html spaces"> </code> </div>
+<div class="line number5 index4 alt2"><code class="html plain">pdfReader = PdfFileReader(open("2019_Book_PracticalFlutter.pdf", "rb"))</code></div>
+<div class="line number6 index5 alt1"><code class="html plain">information = [("GitAndGithub",16,26),("GitAndGithub",36,46),("GitAndGithub",196,289)]</code></div>
+<div class="line number7 index6 alt2"><code class="html spaces"> </code> </div>
+<div class="line number8 index7 alt1"><code class="html plain">for page in range(len(information)):</code></div>
+<div class="line number9 index8 alt2"><code class="html spaces">    </code><code class="html plain">pdf_writer = PdfFileWriter()</code></div>
+<div class="line number10 index9 alt1"><code class="html spaces">    </code><code class="html plain">start = information[page][1]</code></div>
+<div class="line number11 index10 alt2"><code class="html spaces">    </code><code class="html plain">end = information[page][2]</code></div>
+<div class="line number12 index11 alt1"><code class="html spaces">    </code><code class="html plain">while start&lt;=end:</code></div>
+<div class="line number13 index12 alt2"><code class="html spaces">        </code><code class="html plain">pdf_writer.addPage(pdfReader.getPage(start-1))</code></div>
+<div class="line number14 index13 alt1"><code class="html spaces">        </code><code class="html plain">start+=1</code></div>
+<div class="line number15 index14 alt2"><code class="html spaces">    </code><code class="html plain">if not os.path.exists("./"):</code></div>
+<div class="line number16 index15 alt1"><code class="html spaces">        </code><code class="html plain">os.makedirs(savepath)</code></div>
+<div class="line number17 index16 alt2"><code class="html spaces">    </code><code class="html plain">output_filename = '{}_{}_page_{}.pdf'.format(information[page][0],information[page][1], information[page][2])</code></div>
+<div class="line number18 index17 alt1"><code class="html spaces">    </code><code class="html plain">with open(output_filename,'wb') as out:</code></div>
+<div class="line number19 index18 alt2"><code class="html spaces">        </code><code class="html plain">pdf_writer.write(out)</code></div>
+</div>
+</td>
+</tr>
+</tbody>
+</table>
+</div>
+</div>
+<p><strong>再使用以下程式合併成一個pdf檔</strong></p>
+<div>
+<div class="syntaxhighlighter html" id="highlighter_749331">
+<table border="0" cellpadding="0" cellspacing="0">
+<tbody>
+<tr>
+<td class="gutter">
+<div class="line number1 index0 alt2">1</div>
+<div class="line number2 index1 alt1">2</div>
+<div class="line number3 index2 alt2">3</div>
+<div class="line number4 index3 alt1">4</div>
+<div class="line number5 index4 alt2">5</div>
+<div class="line number6 index5 alt1">6</div>
+<div class="line number7 index6 alt2">7</div>
+<div class="line number8 index7 alt1">8</div>
+<div class="line number9 index8 alt2">9</div>
+<div class="line number10 index9 alt1">10</div>
+<div class="line number11 index10 alt2">11</div>
+<div class="line number12 index11 alt1">12</div>
+<div class="line number13 index12 alt2">13</div>
+<div class="line number14 index13 alt1">14</div>
+<div class="line number15 index14 alt2">15</div>
+<div class="line number16 index15 alt1">16</div>
+<div class="line number17 index16 alt2">17</div>
+</td>
+<td class="code">
+<div class="container">
+<div class="line number1 index0 alt2"><code class="html plain"># pypdf2_ex3.py</code></div>
+<div class="line number2 index1 alt1"><code class="html plain"># merge several pdf files</code></div>
+<div class="line number3 index2 alt2"><code class="html plain">import sys</code></div>
+<div class="line number4 index3 alt1"><code class="html plain">import PyPDF2</code></div>
+<div class="line number5 index4 alt2"> </div>
+<div class="line number6 index5 alt1"><code class="html plain">pdf_write_object = PyPDF2.PdfFileWriter()</code></div>
+<div class="line number7 index6 alt2"> </div>
+<div class="line number8 index7 alt1"><code class="html plain">#for i in sys.argv[1:]:</code></div>
+<div class="line number9 index8 alt2"><code class="html plain">for i in ["GitAndGithub_16_page_26.pdf","GitAndGithub_36_page_46.pdf","GitAndGithub_196_page_289.pdf"]:</code></div>
+<div class="line number10 index9 alt1"><code class="html plain">pdf_read_object = PyPDF2.PdfFileReader(i)</code></div>
+<div class="line number11 index10 alt2"><code class="html plain">print('processing file : '+ i + 'number of pages : ' + str(pdf_read_object.numPages))</code></div>
+<div class="line number12 index11 alt1"><code class="html plain">for page in range(pdf_read_object.numPages):</code></div>
+<div class="line number13 index12 alt2"><code class="html plain">pdf_write_object.addPage(pdf_read_object.getPage(page))</code></div>
+<div class="line number14 index13 alt1"> </div>
+<div class="line number15 index14 alt2"><code class="html plain">final_file_object = open('2020CMS.pdf', 'wb')</code></div>
+<div class="line number16 index15 alt1"><code class="html plain">pdf_write_object.write(final_file_object)</code></div>
+<div class="line number17 index16 alt2"><code class="html plain">final_file_object.close()</code></div>
+</div>
+</td>
+</tr>
+</tbody>
+</table>
+</div>
+</div>
+<h1>ssh key</h1>
+<p><span>利用隨身系統輸入指令sh</span></p>
+<p>輸入指令ssh-keygen -t rsa -b 4096 -C "學號"</p>
+<p>預設之金鑰儲存在y:\home\.ssh目錄裡</p>
+<p><span><img alt="" height="313" src="/images/sh1.png" width="437"/></span></p>
+<p>使用puttygen將private key(id_rsa)導入，並轉換為putty能夠讀懂的格式(.ppk)檔案</p>
+<p><span><img alt="" height="391" src="/images/sh2.png" width="436"/></span></p>
+<p><span></span></p>
+<p><span><img alt="" height="319" src="/images/sh3.png" width="440"/></span></p>
+<p><span></span></p>

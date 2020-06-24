@@ -154,115 +154,15 @@ img.add_border {
           </div>
           
         </header>
-    <div id="tipue_search_content">W15 << <a href='W15.html'>Previous</a> <a href='ssh key  設定.html'>Next</a> >> ssh key  設定<br /><h1>W16~W17</h1>
-<h4><strong><span>利用pypdf2擷取pdf與合併pdf的程式，並利用API放上動態網站測試。</span></strong></h4>
-<p><strong><span>利用pypdf2擷取出3個pdf檔</span></strong></p>
-<div>
-<div class="syntaxhighlighter html" id="highlighter_657309">
-<table border="0" cellpadding="0" cellspacing="0">
-<tbody>
-<tr>
-<td class="gutter">
-<div class="line number1 index0 alt2">1</div>
-<div class="line number2 index1 alt1">2</div>
-<div class="line number3 index2 alt2">3</div>
-<div class="line number4 index3 alt1">4</div>
-<div class="line number5 index4 alt2">5</div>
-<div class="line number6 index5 alt1">6</div>
-<div class="line number7 index6 alt2">7</div>
-<div class="line number8 index7 alt1">8</div>
-<div class="line number9 index8 alt2">9</div>
-<div class="line number10 index9 alt1">10</div>
-<div class="line number11 index10 alt2">11</div>
-<div class="line number12 index11 alt1">12</div>
-<div class="line number13 index12 alt2">13</div>
-<div class="line number14 index13 alt1">14</div>
-<div class="line number15 index14 alt2">15</div>
-<div class="line number16 index15 alt1">16</div>
-<div class="line number17 index16 alt2">17</div>
-<div class="line number18 index17 alt1">18</div>
-<div class="line number19 index18 alt2">19</div>
-</td>
-<td class="code">
-<div class="container">
-<div class="line number1 index0 alt2"><code class="html plain"># pypdf2_ex2.py</code></div>
-<div class="line number2 index1 alt1"><code class="html plain">import os</code></div>
-<div class="line number3 index2 alt2"><code class="html plain">from PyPDF2 import PdfFileWriter, PdfFileReader</code></div>
-<div class="line number4 index3 alt1"><code class="html spaces"> </code> </div>
-<div class="line number5 index4 alt2"><code class="html plain">pdfReader = PdfFileReader(open("2019_Book_PracticalFlutter.pdf", "rb"))</code></div>
-<div class="line number6 index5 alt1"><code class="html plain">information = [("GitAndGithub",16,26),("GitAndGithub",36,46),("GitAndGithub",196,289)]</code></div>
-<div class="line number7 index6 alt2"><code class="html spaces"> </code> </div>
-<div class="line number8 index7 alt1"><code class="html plain">for page in range(len(information)):</code></div>
-<div class="line number9 index8 alt2"><code class="html spaces">    </code><code class="html plain">pdf_writer = PdfFileWriter()</code></div>
-<div class="line number10 index9 alt1"><code class="html spaces">    </code><code class="html plain">start = information[page][1]</code></div>
-<div class="line number11 index10 alt2"><code class="html spaces">    </code><code class="html plain">end = information[page][2]</code></div>
-<div class="line number12 index11 alt1"><code class="html spaces">    </code><code class="html plain">while start&lt;=end:</code></div>
-<div class="line number13 index12 alt2"><code class="html spaces">        </code><code class="html plain">pdf_writer.addPage(pdfReader.getPage(start-1))</code></div>
-<div class="line number14 index13 alt1"><code class="html spaces">        </code><code class="html plain">start+=1</code></div>
-<div class="line number15 index14 alt2"><code class="html spaces">    </code><code class="html plain">if not os.path.exists("./"):</code></div>
-<div class="line number16 index15 alt1"><code class="html spaces">        </code><code class="html plain">os.makedirs(savepath)</code></div>
-<div class="line number17 index16 alt2"><code class="html spaces">    </code><code class="html plain">output_filename = '{}_{}_page_{}.pdf'.format(information[page][0],information[page][1], information[page][2])</code></div>
-<div class="line number18 index17 alt1"><code class="html spaces">    </code><code class="html plain">with open(output_filename,'wb') as out:</code></div>
-<div class="line number19 index18 alt2"><code class="html spaces">        </code><code class="html plain">pdf_writer.write(out)</code></div>
-</div>
-</td>
-</tr>
-</tbody>
-</table>
-</div>
-</div>
-<p><strong>再使用以下程式合併成一個pdf檔</strong></p>
-<div>
-<div class="syntaxhighlighter html" id="highlighter_749331">
-<table border="0" cellpadding="0" cellspacing="0">
-<tbody>
-<tr>
-<td class="gutter">
-<div class="line number1 index0 alt2">1</div>
-<div class="line number2 index1 alt1">2</div>
-<div class="line number3 index2 alt2">3</div>
-<div class="line number4 index3 alt1">4</div>
-<div class="line number5 index4 alt2">5</div>
-<div class="line number6 index5 alt1">6</div>
-<div class="line number7 index6 alt2">7</div>
-<div class="line number8 index7 alt1">8</div>
-<div class="line number9 index8 alt2">9</div>
-<div class="line number10 index9 alt1">10</div>
-<div class="line number11 index10 alt2">11</div>
-<div class="line number12 index11 alt1">12</div>
-<div class="line number13 index12 alt2">13</div>
-<div class="line number14 index13 alt1">14</div>
-<div class="line number15 index14 alt2">15</div>
-<div class="line number16 index15 alt1">16</div>
-<div class="line number17 index16 alt2">17</div>
-</td>
-<td class="code">
-<div class="container">
-<div class="line number1 index0 alt2"><code class="html plain"># pypdf2_ex3.py</code></div>
-<div class="line number2 index1 alt1"><code class="html plain"># merge several pdf files</code></div>
-<div class="line number3 index2 alt2"><code class="html plain">import sys</code></div>
-<div class="line number4 index3 alt1"><code class="html plain">import PyPDF2</code></div>
-<div class="line number5 index4 alt2"> </div>
-<div class="line number6 index5 alt1"><code class="html plain">pdf_write_object = PyPDF2.PdfFileWriter()</code></div>
-<div class="line number7 index6 alt2"> </div>
-<div class="line number8 index7 alt1"><code class="html plain">#for i in sys.argv[1:]:</code></div>
-<div class="line number9 index8 alt2"><code class="html plain">for i in ["GitAndGithub_16_page_26.pdf","GitAndGithub_36_page_46.pdf","GitAndGithub_196_page_289.pdf"]:</code></div>
-<div class="line number10 index9 alt1"><code class="html plain">pdf_read_object = PyPDF2.PdfFileReader(i)</code></div>
-<div class="line number11 index10 alt2"><code class="html plain">print('processing file : '+ i + 'number of pages : ' + str(pdf_read_object.numPages))</code></div>
-<div class="line number12 index11 alt1"><code class="html plain">for page in range(pdf_read_object.numPages):</code></div>
-<div class="line number13 index12 alt2"><code class="html plain">pdf_write_object.addPage(pdf_read_object.getPage(page))</code></div>
-<div class="line number14 index13 alt1"> </div>
-<div class="line number15 index14 alt2"><code class="html plain">final_file_object = open('2020CMS.pdf', 'wb')</code></div>
-<div class="line number16 index15 alt1"><code class="html plain">pdf_write_object.write(final_file_object)</code></div>
-<div class="line number17 index16 alt2"><code class="html plain">final_file_object.close()</code></div>
-</div>
-</td>
-</tr>
-</tbody>
-</table>
-</div>
-</div>
-<br />W15 << <a href='W15.html'>Previous</a> <a href='ssh key  設定.html'>Next</a> >> ssh key  設定</div>
+    <div id="tipue_search_content">ssh key  設定 << <a href='ssh key  設定.html'>Previous</a> <br /><h1>putty  設定</h1>
+<p><img alt="" height="434" src="./../images/p4.png" width="482"/></p>
+<p><span><img alt="" height="438" src="./../images/p2.png" width="492"/></span></p>
+<p><span>之後要回到Session中按下save存檔</span></p>
+<p><span><img alt="" height="431" src="./../images/p5.png" width="481"/></span></p>
+<p><span>進入Y:\tmp\wcm2020\.git內修改config檔案</span></p>
+<p><span>修改完成後變為:</span></p>
+<p><span><img alt="" height="316" src="./../images/p3.png" width="490"/></span></p>
+<p><span></span></p><br />ssh key  設定 << <a href='ssh key  設定.html'>Previous</a> </div>
         
     <!-- footer -->
       <div class="container">
