@@ -154,8 +154,15 @@ img.add_border {
           </div>
           
         </header>
-    <div id="tipue_search_content"> <a href='W1~W5.html'>Next</a> >> W1~W5<br /><h1>每週內容</h1>
-<br /> <a href='W1~W5.html'>Next</a> >> W1~W5</div>
+    <div id="tipue_search_content">W11~W13 << <a href='W11~W13.html'>Previous</a> <a href='W15.html'>Next</a> >> W15<br /><h1>W14</h1>
+<h4>MBR與GPT磁碟分割之差異</h4>
+<p><strong>MBR:MBR為Master Boot Record Boot Record的縮寫，為1983年由IBM公司所提出的分割表格式。</strong></p>
+<p><strong>位於硬碟開始部份的一個特殊磁區，內含系統載入器及硬碟邏輯分割區資訊。啟動系統時會從磁區內使用代碼來啟動系統，若MBR之啟動資訊損壞，則系統無法正常啟動。</strong></p>
+<p><strong>MBR只能用於最大容量為2TB的硬碟，如果使用超過2TB之硬碟，多出來的部分將無法被辨識。MBR最多只支援將硬碟設定為四個主要磁碟分割。</strong></p>
+<p><strong>使用MBR啟動電腦時，將先啟動主機板之BIOS，隨後BIOS載入MBR，最後MBR啟動系統。</strong></p>
+<p><strong>GPT:GPT為GUID Partition Tableartition Table的縮寫，其更加符合現代需求，故成為逐漸取代MBR的新標準。GPT最凸顯的優勢在於它突破了MBR最大只支援2T硬碟的限制，同時使用者可以將硬碟劃分數量不限的分割槽，雖然Windows只允許GPT硬碟上最多有128個分區，但128個分區基本上已經能滿足所有人群的使用需求。</strong></p>
+<p><strong>另外，GPT並不會把引導資料都存儲在一個位置，從資訊安全的角度來看比MBR更加優秀。</strong></p>
+<br />W11~W13 << <a href='W11~W13.html'>Previous</a> <a href='W15.html'>Next</a> >> W15</div>
         
     <!-- footer -->
       <div class="container">

@@ -154,8 +154,64 @@ img.add_border {
           </div>
           
         </header>
-    <div id="tipue_search_content"> <a href='W1~W5.html'>Next</a> >> W1~W5<br /><h1>每週內容</h1>
-<br /> <a href='W1~W5.html'>Next</a> >> W1~W5</div>
+    <div id="tipue_search_content">W14 << <a href='W14.html'>Previous</a> <a href='W16~W17.html'>Next</a> >> W16~W17<br /><h1>W15</h1>
+<h4><strong><span>利用Pypdf2切割pdf檔</span></strong></h4>
+<p><strong><span>切割PDF之.py程式檔</span></strong></p>
+<div>
+<div class="syntaxhighlighter html" id="highlighter_694838">
+<table border="0" cellpadding="0" cellspacing="0">
+<tbody>
+<tr>
+<td class="gutter">
+<div class="line number1 index0 alt2">1</div>
+<div class="line number2 index1 alt1">2</div>
+<div class="line number3 index2 alt2">3</div>
+<div class="line number4 index3 alt1">4</div>
+<div class="line number5 index4 alt2">5</div>
+<div class="line number6 index5 alt1">6</div>
+<div class="line number7 index6 alt2">7</div>
+<div class="line number8 index7 alt1">8</div>
+<div class="line number9 index8 alt2">9</div>
+<div class="line number10 index9 alt1">10</div>
+<div class="line number11 index10 alt2">11</div>
+<div class="line number12 index11 alt1">12</div>
+<div class="line number13 index12 alt2">13</div>
+<div class="line number14 index13 alt1">14</div>
+<div class="line number15 index14 alt2">15</div>
+<div class="line number16 index15 alt1">16</div>
+<div class="line number17 index16 alt2">17</div>
+<div class="line number18 index17 alt1">18</div>
+<div class="line number19 index18 alt2">19</div>
+</td>
+<td class="code">
+<div class="container">
+<div class="line number1 index0 alt2"><code class="html plain"># pypdf2_ex1.py</code></div>
+<div class="line number2 index1 alt1"><code class="html plain">import os</code></div>
+<div class="line number3 index2 alt2"><code class="html plain">from PyPDF2 import PdfFileWriter, PdfFileReader</code></div>
+<div class="line number4 index3 alt1"><code class="html spaces">   </code> </div>
+<div class="line number5 index4 alt2"><code class="html plain">pdfReader = PdfFileReader(open("2002_Book_Real-WorldASPNETBuildingAConte.pdf", "rb"))</code></div>
+<div class="line number6 index5 alt1"><code class="html plain">information = [("WhatIsCMS",18,45)]</code></div>
+<div class="line number7 index6 alt2"><code class="html spaces">   </code> </div>
+<div class="line number8 index7 alt1"><code class="html plain">for page in range(len(information)):</code></div>
+<div class="line number9 index8 alt2"><code class="html spaces">    </code><code class="html plain">pdf_writer = PdfFileWriter()</code></div>
+<div class="line number10 index9 alt1"><code class="html spaces">    </code><code class="html plain">start = information[page][1]</code></div>
+<div class="line number11 index10 alt2"><code class="html spaces">    </code><code class="html plain">end = information[page][2]</code></div>
+<div class="line number12 index11 alt1"><code class="html spaces">    </code><code class="html plain">while start&lt;=end:</code></div>
+<div class="line number13 index12 alt2"><code class="html spaces">        </code><code class="html plain">pdf_writer.addPage(pdfReader.getPage(start-1))</code></div>
+<div class="line number14 index13 alt1"><code class="html spaces">        </code><code class="html plain">start+=1</code></div>
+<div class="line number15 index14 alt2"><code class="html spaces">    </code><code class="html plain">if not os.path.exists("./"):</code></div>
+<div class="line number16 index15 alt1"><code class="html spaces">        </code><code class="html plain">os.makedirs(savepath)</code></div>
+<div class="line number17 index16 alt2"><code class="html spaces">    </code><code class="html plain">output_filename = '{}_{}_page_{}.pdf'.format(information[page][0],information[page][1], information[page][2])</code></div>
+<div class="line number18 index17 alt1"><code class="html spaces">    </code><code class="html plain">with open(output_filename,'wb') as out:</code></div>
+<div class="line number19 index18 alt2"><code class="html spaces">        </code><code class="html plain">pdf_writer.write(out)</code></div>
+</div>
+</td>
+</tr>
+</tbody>
+</table>
+</div>
+</div>
+<br />W14 << <a href='W14.html'>Previous</a> <a href='W16~W17.html'>Next</a> >> W16~W17</div>
         
     <!-- footer -->
       <div class="container">

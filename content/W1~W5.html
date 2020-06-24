@@ -123,14 +123,14 @@ img.add_border {
             <header class="site-navbar py-4 bg-white" role="banner">
               <div class="container-fluid">
                 <div class="row align-items-center">
-                <h1>CMSiMDE 網際內容管理系統</h1>
+                <h1>網際內容管理   40823129</h1>
                 <div class="pl-4">
                     <form>
                     <input type="text" placeholder="Search" name="q" id="tipue_search_input" pattern=".{2,}" title="At least 2 characters" required>
                     </form>
                 </div>
                   <!-- <div class="col-11 col-xl-2">
-                    <h1 class="mb-0 site-logo"><a href="index.html" class="text-black h2 mb-0">CMSiMDE 網際內容管理系統</a></h1> 
+                    <h1 class="mb-0 site-logo"><a href="index.html" class="text-black h2 mb-0">網際內容管理   40823129</a></h1> 
                   </div>
                   -->
                   <div class="col-12 col-md-10 d-none d-xl-block">
@@ -143,7 +143,7 @@ img.add_border {
                             <li><a href="./../blog/index.html">blog</a></li>
                         </ul>
                       </li>
-                     <li><a href='About.html'>About</a><li><a href='Develop.html'>Develop</a></li>
+                     <li class='has-children'><a href='每週內容.html'>每週內容</a><ul class='dropdown'><li><a href='W1~W5.html'>W1~W5</a><li><a href='W6.html'>W6</a><li><a href='W7.html'>W7</a><li><a href='W8.html'>W8</a><li><a href='W9~W10.html'>W9~W10</a><li><a href='W11~W13.html'>W11~W13</a><li><a href='W14.html'>W14</a><li><a href='W15.html'>W15</a><li><a href='W16~W17.html'>W16~W17</a></li>
                       </ul>
                 </nav>
               </div>
@@ -154,10 +154,92 @@ img.add_border {
           </div>
           
         </header>
-    <div id="tipue_search_content">About << <a href='About.html'>Previous</a> <br /><h1>Develop</h1>
-<p><a href="https://github.com/mdecourse/cmsimde">https://github.com/mdecourse/cmsimde</a> 的開發, 可以在一個目錄中放入 cmsimde, 然後將 up_dir 中的內容放到與 cmsimde 目錄同位階的地方, 使用 command 進入 cmsimde 目錄, 執行 python wsgi.py, 就可以啟動, 以瀏覽器 https://localhost:9443 就可以連接, 以 admin 作為管理者密碼, 就可以登入維護內容.</p>
-<p>cmsimde 的開發採用 Leo Editor, 開啟 cmsimde 目錄中的 cmsimde.leo 就可以進行程式修改, 結束後, 若要保留網際內容, 只要將 cmsimde 外部的內容倒回 up_dir 目錄中即可後續對 cmsimde 遠端倉儲進行改版.</p>
-<p>init.py 位於  up_dir 目錄, 可以設定 site_title 與 uwsgi 等變數.</p><br />About << <a href='About.html'>Previous</a> </div>
+    <div id="tipue_search_content">每週內容 << <a href='每週內容.html'>Previous</a> <a href='W6.html'>Next</a> >> W6<br /><h1>W1~W5</h1>
+<h4>隨身系統之建立</h4>
+<p>(1)下載安裝Python3.8.2至電腦，從電腦C槽中複製Python38資料夾至隨身系統之data目錄下，<span>解除電腦系統中之</span>Python。</p>
+<p>(2)下載<span>Scite.exe編輯器並將資料夾移至隨身系統下之data目錄下，將SciTEGlobal.properties檔案中的code.page = 0修改為code.page = 65001，如此一來就可以更方便的打開內涵中文字的程式了，最後利用SciTE建立stop.bat與start.bat如下:</span></p>
+<p><span><img alt="" height="477" src="./../images/START.png" width="409"/></span></p>
+<p><span><img alt="" height="191" src="./../images/STOP.png" width="393"/></span></p>
+<p>(3)<span>利用get-pip.py在先前完成之隨身系統中安裝pip，利用pip指令python -m pip install flask lxml bs4 flask-cors Markdown pelican leo 安裝 flask lxml beautifulsoup4 flask-cors Markdown pelican 及 leo</span></p>
+<p><span>(4)下載msys2先安裝在Windows系統，從電腦C槽中複製msys64資料夾至隨身系統之data目錄下，並解除電腦系統中之msys2。</span></p>
+<p><span>(5)設置y：\ msys64 \ etc \ pacman.conf與wgetrc等兩個檔案：<br/><span><span>pacman.conf檔案部分：</span></span></span></p>
+<div class="line number1 index0 alt2"><code class="html plain"></code></div>
+<div class="line number5 index4 alt2"><code class="html plain"><span>wgetrc檔案部分：</span></code></div>
+<div class="line number5 index4 alt2"><code class="html plain"><span></span></code></div>
+<div class="line number5 index4 alt2">
+<div class="line number1 index0 alt2"><code class="html plain"> # set for wcm2020</code></div>
+<div class="line number2 index1 alt1"><code class="html plain"> https_proxy = http://[2001:288:6004:17::53]:3128/</code></div>
+<div class="line number3 index2 alt2"><code class="html plain"> http_proxy = http://[2001:288:6004:17::53]:3128/</code></div>
+<div class="line number4 index3 alt1"><code class="html plain"> ftp_proxy = <a href="http://[2001:288:6004:17::53]:3128">http://[2001:288:6004:17::53]:3128/</a></code></div>
+<div class="line number4 index3 alt1"><code class="html plain"></code></div>
+<div class="line number4 index3 alt1"><code class="html plain"><span>修改完成後，重新啟動mingw64.exe，使用指令透過IPv6的proxy server進行</span><span>程序包更新：</span></code></div>
+<div class="line number4 index3 alt1"><code class="html plain"><span></span></code></div>
+<div class="line number4 index3 alt1"><span> $ pacman -Syu</span></div>
+<div class="line number4 index3 alt1"><span></span></div>
+<div class="line number4 index3 alt1"><span>再安裝base-devel與gcc</span></div>
+<div class="line number4 index3 alt1"><span></span> </div>
+<div class="line number4 index3 alt1">
+<div class="line number1 index0 alt2"><code class="html plain"> $ pacman -S base-devel</code></div>
+<div class="line number2 index1 alt1"><code class="html plain"> $ pacman -S gcc</code></div>
+<div class="line number2 index1 alt1"><code class="html plain"></code></div>
+<div class="line number2 index1 alt1"><code class="html plain"><span>安裝完後須修改start.bat之內容如下:</span></code></div>
+<div class="line number2 index1 alt1"><code class="html plain"><span></span></code></div>
+<div class="line number2 index1 alt1">
+<div class="line number1 index0 alt2"><code class="html plain"> REM 設定 msys2 64 位元的執行路徑</code></div>
+<div class="line number2 index1 alt1"><code class="html plain"> set path_msys2=%Disk%:\msys64\usr\bin;</code></div>
+<div class="line number3 index2 alt2"> </div>
+<div class="line number4 index3 alt1"><code class="html plain"> path=%Disk%:;%path_python%;%path_git%;%path_msys2%;</code></div>
+<div class="line number4 index3 alt1"><code class="html plain"></code></div>
+<div class="line number4 index3 alt1"><code class="html plain"><span>安裝make:</span></code></div>
+<div class="line number4 index3 alt1"><code class="html plain"><span></span></code></div>
+<div class="line number4 index3 alt1"><code class="html plain"><span> $ pacman -S make</span></code></div>
+<div class="line number4 index3 alt1"><code class="html plain"><span></span></code></div>
+<div class="line number4 index3 alt1"><code class="html plain"><span>處理完MSYS環境中的gcc之後，為了建立Windows 64位元環境下的gcc編譯環境，接下來要在先前尚未處理的MSYS環境下的版本中，安裝mingw-w64-x86_64-gcc與mingw-w64- x86_64-toolchain，下載初步尚未安裝任何gcc版本的可移植MSYS2系統，然後安裝gcc與toolchain：</span></code></div>
+<div class="line number4 index3 alt1"><code class="html plain"><span></span></code></div>
+<div class="line number4 index3 alt1">
+<div class="line number1 index0 alt2"><code class="html plain"> $ pacman -S mingw-w64-x86_64-gcc</code></div>
+<div class="line number2 index1 alt1"> </div>
+<div class="line number3 index2 alt2"><code class="html plain"> $ pacman -S mingw-w64-x86_64-toolchain</code></div>
+<div class="line number3 index2 alt2"><code class="html plain"></code></div>
+<div class="line number3 index2 alt2">
+<p><span>之後就可以修改start.bat啟動路徑為：</span></p>
+<div>
+<div class="line number1 index0 alt2"><code class="html plain"> REM 設定 msys2 64 位元的執行路徑</code></div>
+<div class="line number2 index1 alt1"><code class="html plain"> set path_msys2=%Disk%:\msys64\mingw64\bin;</code></div>
+<div class="line number3 index2 alt2"> </div>
+<div class="line number4 index3 alt1"><code class="html plain"> path=%Disk%:;%path_python%;%path_git%;%path_msys2%;</code></div>
+<div class="line number4 index3 alt1"><code class="html plain"></code></div>
+<div class="line number4 index3 alt1"><code class="html plain"><span>後利用此一mingw-w64-x86_64-gcc編譯放置tmp的Scintilla與Scite，只要分別進入win32目錄，然後執行make指令：</span></code></div>
+<div class="line number4 index3 alt1"><code class="html plain"><span></span></code></div>
+<div class="line number4 index3 alt1"><code class="html plain"><span> $ mingw32-make</span></code></div>
+<div class="line number4 index3 alt1"><code class="html plain"><span></span></code></div>
+<div class="line number4 index3 alt1"><code class="html plain"><span>完成後，測試編譯以下簡單的C程序：</span></code></div>
+<div class="line number4 index3 alt1"><code class="html plain"><span></span></code></div>
+<div class="line number4 index3 alt1">
+<div class="line number1 index0 alt2"><code class="cpp comments"> // hello.c</code></div>
+<div class="line number2 index1 alt1"><code class="cpp preprocessor"> #include &lt;stdio.h&gt;</code></div>
+<div class="line number3 index2 alt2"> </div>
+<div class="line number4 index3 alt1"><code class="cpp color1 bold"> int</code> <code class="cpp plain">main() {</code></div>
+<div class="line number5 index4 alt2"><code class="cpp spaces">     </code><code class="cpp functions bold">printf</code><code class="cpp plain">(</code><code class="cpp string">"Hello, world!\n"</code><code class="cpp plain">);</code></div>
+<div class="line number6 index5 alt1"><code class="cpp spaces">     </code><code class="cpp keyword bold">return</code> <code class="cpp plain">0;</code></div>
+<div class="line number7 index6 alt2"><code class="cpp plain"> }</code></div>
+<div class="line number7 index6 alt2"><code class="cpp plain"></code></div>
+<div class="line number7 index6 alt2"><code class="cpp plain"><span>將此檔案存在tmp \ c_ex目錄下，命名為hello.c</span><br/><span><span>然後利用：</span></span></code></div>
+<div class="line number7 index6 alt2"><code class="cpp plain"><span></span></code></div>
+<div class="line number7 index6 alt2"><code class="cpp plain"><span> gcc -o hello.exe hello.c</span></code></div>
+<div class="line number7 index6 alt2"><code class="cpp plain"><span></span></code></div>
+<div class="line number7 index6 alt2">
+<p>完成後將輸出一個hello.exe</p>
+<p>(6)安裝PortableGit於隨身系統。</p>
+</div>
+</div>
+</div>
+</div>
+</div>
+</div>
+</div>
+</div>
+<br />每週內容 << <a href='每週內容.html'>Previous</a> <a href='W6.html'>Next</a> >> W6</div>
         
     <!-- footer -->
       <div class="container">
